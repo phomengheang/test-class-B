@@ -1,0 +1,510 @@
+* {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+    display: none;
+
+}
+
+body {
+    background: rgb(243, 243, 243);
+    display: flex;
+    flex-direction: column;
+}
+
+nav {
+    height: 12vh;
+    width: 100%;
+    background: white;
+    position: fixed;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 100px;
+    border-bottom: 3px solid rgba(0, 128, 128, 0.59);
+
+}
+
+nav ul {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+nav img {
+    width: 75px;
+    margin-left: 15px;
+}
+
+nav ul li {
+    list-style-type: none;
+}
+
+nav ul:nth-child(2) li a {
+    color: black;
+    padding: 10px 20px;
+    margin: 10px;
+    font-weight: bold;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-radius: 5px;
+}
+
+nav ul:nth-child(2) li a:hover {
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+    color: teal;
+}
+
+#go-up {
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    margin-top: 90vh;
+    margin-left: 94.5%;
+    border: none;
+    border-radius: 25px;
+}
+
+#go-up:hover {
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+}
+
+#go-up img {
+    width: 100%;
+}
+
+header {
+    height: 60vh;
+    background-image: url(../images/bg-header.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: 10vh;
+}
+
+header .header-content {
+    width: 40%;
+    background: #00000063;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin-right: 100px;
+}
+
+header .header-content:hover {
+    box-shadow: 0px 0px 10px 0px white;
+}
+
+header .header-content h1 {
+    font-size: 60px;
+}
+
+header .header-content p {
+    margin-top: 10px;
+    text-align: justify;
+}
+
+.value-section,
+.canteen-section,
+.sport-section,
+.aerobic-section {
+    margin: 20px 100px;
+    margin-top: 15vh;
+}
+
+.value-section h1,
+.canteen-section h1,
+.sport-section h1,
+.aerobic-content h1 {
+    margin-bottom: 20px;
+    font-size: 40px;
+    text-align: center;
+}
+
+.card-value:hover,
+.main-card:hover,
+.food-card:hover,
+.sport-card:hover,
+.aerobic-card:hover {
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+}
+
+.group-card {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card-value {
+    width: 18%;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.card-value img {
+    width: 30%;
+}
+
+.card-value h3 {
+    color: teal;
+    font-size: 17px;
+}
+
+.card-value p {
+    font-size: 15px;
+    margin: 10px 0px;
+    text-align: justify;
+}
+
+.card-value button {
+    background: teal;
+    color: white;
+    padding: 5px 20px;
+    border: none;
+    margin-top: 10px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.canteen-section table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+
+}
+
+#border-none {
+    border: none;
+    background: none;
+}
+
+.canteen-section table tr th,
+.canteen-section table tr td {
+    background: white;
+    padding: 5px 10px;
+    border: 1px solid gray;
+    text-align: center;
+    font-size: 15px;
+}
+
+.canteen-section table tr th,
+.canteen-section table tr td:first-child {
+    background: teal;
+    color: white;
+    border-color: white;
+    font-weight: bold;
+}
+
+.canteen-section .main-card {
+    width: 50%;
+    background: white;
+    display: flex;
+    padding: 20px;
+    border-radius: 10px;
+    margin: auto;
+}
+
+.canteen-section .main-card img {
+    width: 30%;
+}
+
+.main-card .main-card-content {
+    margin-left: 20px;
+}
+
+.main-card-content h2 {
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.main-card-content p {
+    text-align: justify;
+}
+
+.food-cards,
+.sport-cards {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.food-card,
+.sport-card {
+    width: 23.5%;
+    background: white;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.sport-card {
+    width: 32%;
+}
+
+.food-card img,
+.sport-card img {
+    width: 100%;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.food-card h5,
+.sport-card h5,
+.aerobic-card h5 {
+    padding: 5px;
+    text-align: center;
+}
+
+.sport-section p {
+    margin: 20px;
+    text-align: justify;
+}
+
+.aerobic-section {
+    display: flex;
+    margin-top: 12.5vh;
+}
+
+.aerobic-img {
+    width: 39%;
+}
+
+.aerobic-img img {
+    height: 100%;
+}
+
+.aerobic-content {
+    width: 62;
+    padding: 20px;
+}
+
+.aerobic-content h1 {
+    margin-top: 0px;
+}
+
+.aerobic-content p {
+    text-align: justify;
+    margin-top: 0px;
+}
+
+.aerobic-content-top {
+    margin-bottom: 20px;
+}
+
+.aerobic-content-bottom {
+    display: flex;
+    justify-content: space-between;
+}
+
+.aerobic-card {
+    width: 48.5%;
+    background: white;
+    border-radius: 10px;
+
+}
+
+.aerobic-card img {
+    width: 100%;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.contact-us-section {
+    display: flex;
+    padding: 20px 200px;
+    margin-top: 10vh;
+}
+
+.form-left {
+    width: 50%;
+    background: rgb(0, 128, 128);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    border-radius: 10px 0px 0px 10px;
+}
+
+.form-left h1 {
+    color: white;
+    margin-bottom: 10px;
+    text-align: center;
+    font-size: 70px;
+    font-weight: 900;
+}
+
+.form-left span {
+    color: rgb(255, 255, 255);
+    font-style: italic;
+    text-align: center;
+}
+
+.form-left p {
+    text-align: justify;
+}
+
+.form-right {
+    width: 50%;
+    background: #cbcbcb;
+    display: flex;
+    flex-direction: column;
+    padding: 10px 20px;
+    border-radius: 0px 10px 10px 0px;
+}
+
+.form-right>* {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+}
+
+.form-right h1 {
+    text-align: center;
+}
+
+.form-right div label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.form-right div input,
+.form-right div textarea,
+.form-right button {
+    padding: 7px 10px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+}
+
+.form-right button {
+    background: teal;
+    color: white;
+    padding: 7px 50px;
+    align-self: center;
+    font-weight: bold;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.location-section {
+    width: 100%;
+    height: 450px;
+    background-image: url(../images/bg-contact.jpg);
+    background-repeat: no-repeat;
+}
+
+.location-section .blur-bg {
+    width: 100%;
+    height: 100%;
+    background: #000000a0;
+    display: flex;
+}
+
+iframe {
+    background: rgb(255, 255, 255);
+    border-radius: 10px;
+    margin: 25px;
+}
+
+.location-content {
+    width: 100%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.location-content>* {
+    margin: 10px;
+}
+
+.location-content h1 {
+    font-size: 60px;
+    text-align: center;
+}
+
+.location-content h1 span {
+    color: orange;
+    font-size: 80px;
+}
+
+.location-content a {
+    color: rgb(0, 208, 255);
+    cursor: pointer;
+}
+
+footer {
+    height: 35vh;
+    display: flex;
+    padding: 0px 100px;
+    align-items: center;
+}
+
+.pnc-values h4,
+.pnc-social-media h4,
+.pnc-majors h4,
+.pnc-departments h4 {
+    color: teal;
+    text-align: center;
+    font-size: 20px;
+
+}
+
+.pnc-values ul,
+.pnc-majors ul,
+.pnc-departments ul {
+    display: flex;
+    flex-direction: column;
+}
+
+.pnc-values ul li,
+.pnc-majors ul li,
+.pnc-departments ul li {
+    margin: 5px;
+    list-style-type: square;
+}
+
+.pnc-values {
+    width: 17%;
+
+}
+
+.pnc-social-media {
+    width: 35%;
+    display: flex;  
+}
+
+.pnc-social-media ul li {
+    list-style-type: none;
+}
+
+.pnc-social-media ul li a {
+    color: rgb(117, 196, 252);
+    display: flex;
+    align-items: center;
+    margin: 10px;
+
+}
+
+.pnc-social-media ul li img {
+    width: 30px;
+    margin-right: 20px;
+}
+
+.pnc-majors {
+    width: 28%;
+}
+
+@media(max-width:1200px) {
+    
+}
