@@ -1,0 +1,925 @@
+* {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+    display: none;
+
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+nav {
+    height: 12vh;
+    width: 100%;
+    background: white;
+    position: fixed;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 100px;
+    border-bottom: 3px solid rgba(0, 128, 128, 0.59);
+
+}
+
+nav ul {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+nav img {
+    width: 75px;
+    margin-left: 15px;
+}
+
+nav ul li {
+    list-style-type: none;
+}
+
+nav ul:nth-child(2) li a {
+    color: black;
+    padding: 10px 20px;
+    margin: 10px;
+    font-weight: bold;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-radius: 5px;
+}
+
+nav ul:nth-child(2) li a:hover {
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+    color: teal;
+}
+
+#go-up {
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    margin-top: 90vh;
+    margin-left: 94.5%;
+    border: none;
+    border-radius: 25px;
+}
+
+#go-up:hover {
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+}
+
+#go-up img {
+    width: 100%;
+}
+
+header {
+    height: 60vh;
+    background-image: url(../images/bg-header.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: 10vh;
+}
+
+header .header-content {
+    width: 40%;
+    background: #00000063;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin-right: 100px;
+}
+
+header .header-content:hover {
+    box-shadow: 0px 0px 10px 0px white;
+}
+
+header .header-content h1 {
+    font-size: 60px;
+}
+
+header .header-content span {
+    margin-top: 10px;
+    text-align: justify;
+}
+
+.value-section,
+.canteen-section,
+.sport-section,
+.aerobic-section {
+    margin: 20px 100px;
+    margin-top: 15vh;
+}
+
+.value-section h1,
+.canteen-section h1,
+.sport-section h1,
+.aerobic-content h1 {
+    margin-bottom: 20px;
+    font-size: 40px;
+    text-align: center;
+}
+
+.card-value:hover,
+.main-card:hover,
+.food-card:hover,
+.sport-card:hover,
+.aerobic-card:hover {
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+}
+.group-card {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card-value {
+    width: 18%;
+
+    background: rgb(243, 243, 243);
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.card-value div:first-child {
+    height: 20%;
+    display: flex;
+    justify-content: center;
+}
+
+.card-value div img {
+    width: 30%;
+
+}
+
+.card-value div:last-child {
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+
+
+.card-value div h3 {
+    color: teal;
+    font-size: 17px;
+}
+
+.card-value p {
+    font-size: 15px;
+    margin: 10px 0px;
+    text-align: justify;
+}
+
+.card-value button {
+    background: teal;
+    color: white;
+    padding: 5px 20px;
+    border: none;
+    margin-top: 10px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.canteen-section table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+
+}
+
+#border-none {
+    border: none;
+    background: none;
+}
+
+.canteen-section table tr th,
+.canteen-section table tr td {
+    background: white;
+    padding: 5px 10px;
+    border: 1px solid gray;
+    text-align: center;
+    font-size: 15px;
+}
+
+.canteen-section table tr th,
+.canteen-section table tr td:first-child {
+    background: teal;
+    color: white;
+    border-color: white;
+    font-weight: bold;
+}
+
+.canteen-section .main-card {
+    
+    width: 70%;
+    background: rgb(243, 243, 243);
+    display: flex;
+    padding: 20px;
+    border-radius: 10px;
+    margin: auto;
+}
+
+.canteen-section .main-card img {
+    
+    width: 30%;
+    height: 100%;
+}
+
+.main-card .main-card-content {
+    margin-left: 20px;
+}
+
+.main-card-content h2 {
+    margin-bottom: 10px;
+    text-align: center;
+    font-size: 25px;
+    color: teal;
+}
+
+.main-card-content p {
+    text-align: justify;
+    font-size: 20px;
+}
+
+.food-cards,
+.sport-cards {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.food-card,
+.sport-card {
+    width: 23.5%;
+    background: rgb(243, 243, 243);
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.sport-card {
+    width: 32%;
+}
+
+.food-card img,
+.sport-card img {
+    width: 100%;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.food-card h5,
+.sport-card h5,
+.aerobic-card h5 {
+    padding: 5px;
+    text-align: center;
+}
+
+.sport-section p {
+    text-align: justify;
+}
+
+.aerobic-section {
+    display: flex;
+    margin-top: 12.5vh;
+}
+
+.aerobic-img {
+    width: 39%;
+}
+
+.aerobic-img img {
+    height: 100%;
+}
+
+.aerobic-content {
+    margin-left: 20px;
+    width: 62%;
+}
+
+.aerobic-content h1 {
+    margin-top: 0px;
+}
+
+.aerobic-content p {
+    text-align: justify;
+    margin-top: 0px;
+}
+
+.aerobic-content-top {
+    margin-bottom: 20px;
+}
+
+.aerobic-content-bottom {
+    display: flex;
+    justify-content: space-between;
+}
+
+.aerobic-card {
+    width: 48.5%;
+    background: white;
+    border-radius: 10px;
+
+}
+
+.aerobic-card img {
+    width: 100%;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.contact-us-section {
+    display: flex;
+    padding: 20px 200px;
+    margin-top: 10vh;
+    
+}
+
+.form-left {
+    width: 50%;
+    background: rgb(0, 128, 128);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    border-radius: 10px 0px 0px 10px;
+
+}
+
+.form-left h1 {
+    color: white;
+    margin-bottom: 10px;
+    text-align: center;
+    font-size: 70px;
+    font-weight: 900;
+}
+
+.form-left span {
+    color: rgb(255, 255, 255);
+    font-style: italic;
+    text-align: center;
+}
+
+.form-left p {
+    text-align: justify;
+}
+
+.form-right {
+    width: 50%;
+    background: #cbcbcb;
+    display: flex;
+    flex-direction: column;
+    padding: 10px 20px;
+    border-radius: 0px 10px 10px 0px;
+}
+
+.form-right>* {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+}
+
+.form-right h1 {
+    text-align: center;
+}
+
+.form-right div label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.form-right div input,
+.form-right div textarea,
+.form-right button {
+    padding: 7px 10px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+}
+.form-left:hover{
+    box-shadow: 0px 0px 10px 0px gray;
+}
+.form-right:hover{
+    box-shadow: 0px 0px 10px 0px teal;
+}
+.form-right button {
+    background: teal;
+    color: white;
+    padding: 7px 50px;
+    align-self: center;
+    font-weight: bold;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.location-section {
+    width: 100%;
+    height: 450px;
+    background-image: url(../images/bg-contact.jpg);
+    background-repeat: no-repeat;
+}
+
+.location-section .blur-bg {
+    width: 100%;
+    height: 100%;
+    background: #000000a0;
+    display: flex;
+}
+
+iframe {
+    background: rgb(255, 255, 255);
+    border-radius: 10px;
+    margin: 25px;
+}
+
+.location-content {
+    width: 100%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.location-content>* {
+    margin: 10px;
+}
+
+.location-content h1 {
+    font-size: 60px;
+    text-align: center;
+}
+
+.location-content h1 span {
+    color: orange;
+    font-size: 80px;
+}
+
+.location-content a {
+    color: rgb(0, 208, 255);
+    cursor: pointer;
+}
+
+footer {
+    height: 35vh;
+    display: flex;
+    padding: 0px 100px;
+    align-items: center;
+}
+
+.pnc-values h4,
+.pnc-social-media h4,
+.pnc-majors h4,
+.pnc-departments h4 {
+    color: teal;
+    text-align: center;
+    font-size: 20px;
+
+}
+
+.pnc-values ul,
+.pnc-majors ul,
+.pnc-departments ul {
+    display: flex;
+    flex-direction: column;
+}
+
+.pnc-values ul li,
+.pnc-majors ul li,
+.pnc-departments ul li {
+    margin: 5px;
+    list-style-type: square;
+}
+
+.pnc-values {
+    width: 17%;
+
+}
+
+.pnc-social-media {
+    width: 35%;
+}
+
+.pnc-social-media ul li {
+    list-style-type: none;
+}
+
+.pnc-social-media ul li a {
+    color: rgb(117, 196, 252);
+    display: flex;
+    align-items: center;
+    margin: 10px;
+
+}
+
+.pnc-social-media ul li img {
+    width: 30px;
+    margin-right: 20px;
+}
+
+.pnc-majors {
+    width: 28%;
+}
+
+@media (max-width: 1220px) {
+    .canteen-section .main-card {
+        width: 70%;
+    }
+
+    .canteen-section .main-card img {
+        width: 25%;
+    }
+
+    .main-card-content h2 {
+        font-size: 25px;
+    }
+
+    .main-card-content p {
+        font-size: 15px;
+    }
+}
+
+@media(max-width:1024px) {
+    body {
+        background: #bfbfbf;
+    }
+
+    nav img {
+        width: 60px;
+    }
+
+    nav {
+        padding: 10px 25px;
+    }
+
+    nav ul:nth-child(2) li a {
+        padding: 5px 12px;
+        margin: 5px;
+    }
+    .value-section,
+    .canteen-section,
+    .sport-section,
+    .aerobic-section {
+        margin: 20px 50px;
+        margin-top: 13vh;
+    }
+    
+    .value-section h1,
+    .canteen-section h1,
+    .sport-section h1,
+    .aerobic-content h1 {
+        margin-bottom: 10px;
+        font-size: 30px;
+    }
+    header {
+        height: 40vh;
+    }
+
+    header .header-content {
+        background: #00000030;
+        margin: 0;
+        padding: 30px;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    header .header-content h1 {
+        font-size: 50px;
+    }
+
+    header .header-content span {
+        text-align: center;
+    }
+
+    header .header-content span:nth-of-type(2),
+    .header-content hr {
+        display: none;
+    }
+
+    header .header-content:hover {
+        box-shadow: none;
+    }
+
+    .group-card {
+        flex-wrap: wrap;
+        gap: 20px
+        ;
+    }
+
+    .card-value {
+        margin: auto;
+        width: 48%;
+        flex-direction: row;
+        align-items: center;
+    }
+    .card-value:first-child{
+        width: 98.5%;
+    }
+    .card-value:first-child p::before{
+        content: "eeling of deep admiration for someone or something elicited by their abilities, qualities, or achievements.";
+
+    }
+
+    .card-value div:first-child {
+        width: 20%;
+        margin-right: 20px;
+
+    }
+
+    .card-value div:last-child {
+        width: 80%;
+    }
+
+    .card-value div:first-child img {
+        width: 80px;
+    }
+
+    .canteen-section table {
+        /* width: 100%; */
+        display: grid;
+    }
+
+    .canteen-section table tr {
+        /* width: 100%; */
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+    }
+
+    .canteen-section table tr td {
+        display: grid;
+    }
+
+    .canteen-section table tr td:first-child {
+        display: grid;
+        align-items: center;
+    }
+
+    .canteen-section table tr td span:nth-child(2) {
+        display: none;
+
+    }
+
+    .canteen-section .main-card {
+        width: 90%;
+    }
+
+    .canteen-section .main-card img {
+        width: 30%;
+    }
+
+    .main-card-content p {
+        font-size: 19px;
+    }
+
+
+    .food-cards {
+        flex-wrap: wrap;
+    }
+
+    .food-card {
+        width: 47%;
+    }
+
+    .aerobic-img {
+        display: none;
+    }
+
+    .aerobic-content {
+        width: 100%;
+        padding-top: 0;
+    }
+
+    .aerobic-content-top p:last-child {
+        display: none;
+    }
+
+    .contact-us-section {
+        padding: 15px 50px;
+        width: 100%;
+        background: #000;
+    }
+
+    .form-left h1 {
+        font-size: 50px;
+    }
+
+    .blur-bg {
+        display: flex;
+        flex-direction: column-reverse;
+        padding: 0;
+    }
+
+    iframe {
+        width: 100%;
+        margin: 0;
+        border-radius: 0px;
+        height: 200px;
+    }
+
+    .location-content h1 {
+        font-size: 40px;
+    }
+
+    .location-content h1 span {
+        font-size: 60px;
+    }
+
+    .location-content p {
+        font-size: 15px;
+    }
+
+    footer {
+        flex-direction: column;
+        background: white;
+        height: 100%;
+        padding: 0px;
+    }
+
+    .pnc-values,
+    .pnc-social-media,
+    .pnc-majors,
+    .pnc-departments {
+        width: 100%;
+        margin: 20px;
+    }
+
+    .pnc-values ul,
+    .pnc-majors ul,
+    .pnc-departments ul,
+    .pnc-social-media ul {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin-top: 10px;
+
+    }
+
+    .pnc-values ul li,
+    .pnc-majors ul li,
+    .pnc-departments ul li {
+        list-style-type: none;
+        margin: 5px 20px;
+        text-align: center;
+        cursor: pointer;
+        font-weight: bold;
+    }
+
+    .pnc-values ul li:hover,
+    .pnc-majors ul li:hover,
+    .pnc-departments ul li:hover {
+        text-decoration: underline;
+        color: teal;
+    }
+
+    .pnc-social-media ul li a span {
+        display: none;
+    }
+
+}
+
+@media(max-width:767px) {
+    body {
+        display: flex;
+        flex-direction: row;
+    }
+    nav{
+        width: 20%;
+        height: 100vh;
+        
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 0;
+        border-right:1px solid black;
+    }
+
+    nav img{
+        margin: 0;
+        margin-top: 20px;
+        width: 100px;
+        height: auto;
+    }
+    nav ul{
+        height: auto;
+    }
+    nav ul:last-child{
+        margin-top: 20px;
+        flex-direction: column;
+        width: 100%;
+
+    }
+    nav ul:last-child li{
+        width: 100%;
+        display: flex;
+    }
+    nav ul:last-child li a{
+        margin: 5px 0px;
+        width: 100%;
+        text-align: center;
+        margin: 0;
+        border-radius: 0px;
+        border-bottom: 5px solid white;
+    }
+    nav ul:last-child li a:hover{
+        border-bottom: 5px solid teal;
+        box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+    }
+
+    main{
+        width: 80%;
+        margin-left: 20%;
+    }
+    header{
+        margin: 0;
+        height: auto;
+    }
+    .header-content{
+        border-radius: 0px;
+        height: auto;
+    }
+    header .header-content h1{
+        font-size:30px
+    }
+    header .header-content span{
+        display: none;
+    }
+    .value-section,
+    .canteen-section,
+    .sport-section,
+    .aerobic-section {
+        margin: 40px 25px;
+        margin-top: 1vh;
+    }
+    .canteen-section .main-card {
+        width: 100%;
+    }
+    .card-value{
+        width: 100%;
+    }
+    .card-value button{
+        display: none;
+    }
+    .card-value:first-child{
+        padding:0px 10px;
+        height:150px;
+    }
+    .card-value:first-child div{
+        background: #e2d3d37b;
+    }
+    .card-value:first-child div:last-child{
+        padding: 0;background: #000;
+    }
+    .card-value:first-child h3{
+        margin-top: 10px;
+    }
+    .card-value:first-child p{
+        visibility: hidden;
+        position: relative;
+    }
+    .card-value:first-child p::after{
+
+        margin:0px 10px;
+        visibility: visible;
+        position: absolute;
+        top: 0;
+        left: 0;
+        content:"Trust, an arrangement whereby a person (a trustee) holds property as its nominal owner for the goodof one or more ";
+    }
+    .canteen-section table{
+        display: none;
+    }
+    .canteen-section .main-card{
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+        padding-left: 0;
+    }
+    .main-card img{
+        border-radius: 10px;
+        margin-bottom: 10px;
+
+    }
+    .main-card  p{
+        font-size: 15px;
+    }
+    .main-card  p:last-child{
+        display: none;
+    }
+    .food-card{
+        width: 100%;
+    }
+}
